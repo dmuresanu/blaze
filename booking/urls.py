@@ -1,10 +1,11 @@
-# booking/urls.py
-
 from django.urls import path
-from . import views
+from django.views.generic import TemplateView  # Import TemplateView only if needed
 
 urlpatterns = [
-    path('some_booking_page/', views.booking_form, name='booking_form'),  # Corrected view name
-    path('confirmation/', views.confirmation, name='confirmation'),       # Confirmation page
+    # Example of a booking app route (add your real routes here)
+    path('', TemplateView.as_view(template_name='booking_home.html'), name='booking_home'),
+    
+    # Add any specific booking-related views here
+    # e.g., path('reserve/', views.reserve, name='reserve'),
 ]
 

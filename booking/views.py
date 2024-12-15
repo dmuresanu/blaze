@@ -3,9 +3,11 @@
 from django.shortcuts import render, redirect
 from .forms import BookingForm
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required  # Import login_required decorator
 
 # Create your views here.
 
+@login_required  # This ensures only logged-in users can access this view
 def booking_form(request):
     if request.method == "POST":
         form = BookingForm(request.POST)
