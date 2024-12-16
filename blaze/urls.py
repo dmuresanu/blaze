@@ -27,3 +27,5 @@ urlpatterns = [
     # Booking app URLs (Restricted to logged-in users)
     path('booking/', include('booking.urls')),  # Link Booking app with a 'booking' prefix
 ]
+
+

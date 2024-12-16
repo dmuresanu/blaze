@@ -1,14 +1,14 @@
 from django.db import models
 
-# Create your models here.
-
+# Booking model with both fields
 class Booking(models.Model):
-    name = models.CharField(max_length=100)
-    email = models.EmailField()
-    date = models.DateField()
+    # Fields from the first Booking model
+        name = models.CharField(max_length=100)
+        email = models.EmailField()
+        date = models.DateField()
 
-    def __str__(self):
-        return f"{self.name} - {self.date}"
+        def __str__(self):
+            return f"{self.name} - {self.date}"
 
 class Booking(models.Model):
     # Existing fields...
@@ -18,3 +18,4 @@ class Booking(models.Model):
         ('evening', 'Evening (6 PM - 9 PM)'),
     ]
     time_slot = models.CharField(max_length=10, choices=TIME_SLOTS, default='morning')
+

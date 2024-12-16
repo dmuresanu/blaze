@@ -21,3 +21,4 @@ def booking_form(request):
 
 def confirmation(request):
     return render(request, 'booking/confirmation.html')
+
