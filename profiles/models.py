@@ -32,6 +32,7 @@ class Profile(AbstractBaseUser, PermissionsMixin):
     # For example, a profile picture or bio:
     profile_picture = models.ImageField(upload_to='profile_pics/', blank=True, null=True)
     bio = models.TextField(blank=True, null=True)
+    
 
     objects = ProfileManager()
 
